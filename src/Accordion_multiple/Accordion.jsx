@@ -2,10 +2,14 @@ import {useState} from 'react';
 import Accordion_data from "./Accordion_data.js";
 import './Accordion.css'
 const Accordion = () => {
-    const [selected, setSelected] = useState([null]);
+    const [selected, setSelected] = useState([]);
     const handleItemClick = (selectedID) => {
-        setSelected(selectedID === selected ? null : [...selectedID])
-        console.log(selected)
+        if(selected.includes(selectedID)) {
+            setSelected(selected.filter(id=>id!==selectedID))
+        }
+        else {
+            setSelected([...selected,selectedID])
+        }
     }
     return (
         <div className={"accordion"}>
@@ -16,7 +20,7 @@ const Accordion = () => {
                         <div className={"accordion-heading"}>
                             <h3>{item.question}</h3><span onClick={() => handleItemClick(item.id)}>+</span>
                         </div>
-                        {item.id === selected && (
+                        {selected.includes(item.id) && (
                             <div className={"accordion-data"}>
                                 <p>{item.answer}</p>
                             </div>

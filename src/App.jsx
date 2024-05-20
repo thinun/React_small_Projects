@@ -1,15 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Accordion from "./Accordion_multiple/Accordion.jsx";
 import './App.css'
-import Accordion from "./Accordion/Accordion.jsx";
+
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-        <Accordion></Accordion>
+      <Accordion></Accordion>
+
     </>
   )
 }
