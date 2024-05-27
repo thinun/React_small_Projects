@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Accordion from "./Accordion_multiple/Accordion.jsx";
 import './App.css'
+import StarRating from "./Star_rating/StarRating.jsx";
 
 
 
@@ -9,7 +9,8 @@ function App() {
 
   return (
     <>
-      <Accordion></Accordion>
+        <StarRating></StarRating>
+
 
     </>
   )
