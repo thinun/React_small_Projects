@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import StarRating from "./Star_rating/StarRating.jsx";
+import ImageSlider from './ImageSlider/ImageSlider.jsx'
 
 
 
@@ -9,7 +9,8 @@ function App() {
 
   return (
     <>
-        <StarRating></StarRating>
+        <ImageSlider></ImageSlider>
+
 
 
     </>
