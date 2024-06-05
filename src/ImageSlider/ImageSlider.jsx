@@ -35,9 +35,10 @@ const ImageSlider = () => {
 
     return (
         <div>
-            {imgURL ? <img src={imgURL} alt="Random Image" /> : <p>Loading...</p>}
-            <button onClick={handleClickNext}>Next</button>
             <button onClick={handleClickPrevious}>Previous</button>
+            {imgURL ? <img src={imgURL} alt="Random Image"/> : <p>Loading...</p>}
+            <button onClick={handleClickNext}>Next</button>
+
         </div>
     );
 };
