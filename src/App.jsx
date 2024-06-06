@@ -1,15 +1,15 @@
-import { useState } from 'react'
+
 import './App.css'
-import ImageSlider from './ImageSlider/ImageSlider.jsx'
+import Test from "./Test/Test.jsx";
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-        <ImageSlider></ImageSlider>
+        <Test></Test>
 
 
 

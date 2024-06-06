@@ -1,4 +1,4 @@
-import './StarRating.css';
+ import './StarRating.css';
 import {FaStar} from 'react-icons/fa';
 import {useState} from 'react';
 

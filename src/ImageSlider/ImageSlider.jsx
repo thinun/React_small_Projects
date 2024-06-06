@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 const ImageSlider = () => {
     const [imgURL, setImgURL] = useState('');
     const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const [number, setNumber] = useState(num[-1]);
+    const [number, setNumber] = useState(num[0]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const ImageSlider = () => {
     };
     // previous
     const handleClickPrevious = () => {
-        let newIndex = (currentIndex - 1) % num.length;
+        let newIndex = (currentIndex - 1 + num.length) % num.length;
         setCurrentIndex(newIndex);
         setNumber(num[newIndex]);
     };
