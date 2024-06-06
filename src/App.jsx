@@ -1,6 +1,6 @@
 
 import './App.css'
-import Test3 from "./useMemo/Test3.jsx";
+import Test4 from "./useCallback/Test4.jsx";
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-        <Test3></Test3>
+        <Test4></Test4>
 
 
 
