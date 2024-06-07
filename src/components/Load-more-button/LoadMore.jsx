@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import './LoadMore.css';
 
-const LoadMoreComponent = () => {
+const LoadMore = () => {
     const [count, setCount] = useState(0);
     const [loading, setLoading] = useState(false);
     const [products, setProducts] = useState([]);
@@ -13,8 +13,8 @@ const LoadMoreComponent = () => {
                 const response = await fetch(`https://dummyjson.com/products?limit=9&skip=${skipCount}`);
                 const result = await response.json();
 
-                if (result.products.length > 0) {
-                    setProducts(result.products);
+                if (result && result.products && result.products.length) {
+                    setProducts(prevState => [...prevState, ...result.products]);
                 }
                 setLoading(false);
             } catch (e) {
@@ -22,11 +22,11 @@ const LoadMoreComponent = () => {
                 setLoading(false);
             }
         };
-
         fetchData(count * 9);
+
     }, [count]);
 
-    const loadMore = () => {
+    const handleLoadMore = () => {
         setCount(count + 1);
     };
 
@@ -41,9 +41,10 @@ const LoadMoreComponent = () => {
                     </div>
                 )) : null}
             </div>
-            {loading ? <div className={"loading"}>Loading...</div> : <button onClick={loadMore}>Load More</button>}
+            {loading ? <div className={"loading"}>Loading...</div> :
+                <button onClick={handleLoadMore}>Load More</button>}
         </div>
     );
 };
 
-export default LoadMoreComponent;
+export default LoadMore;
