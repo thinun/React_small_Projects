@@ -1,0 +1,13 @@
+/* styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+.custom-heading {
+  @apply text-4xl font-bold text-blue-500;
+}
+
+.custom-container {
+  @apply flex items-center justify-center h-screen;
+}

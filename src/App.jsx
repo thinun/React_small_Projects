@@ -1,6 +1,5 @@
 
-import './App.css'
-import LoadMore from "./components/Load-more-button/LoadMore.jsx";
+import MyComponent from "./Light Dark mode/DarkMode.jsx";
 
 
 
@@ -10,9 +9,7 @@ function App() {
 
   return (
     <>
-        <LoadMore></LoadMore>
-
-
+        <MyComponent></MyComponent>
 
     </>
   )
