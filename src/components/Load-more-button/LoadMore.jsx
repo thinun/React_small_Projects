@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import './LoadMore.css';
 
 const LoadMoreComponent = () => {
@@ -31,17 +31,17 @@ const LoadMoreComponent = () => {
     };
 
     return (
-        <div className="container">
-            {products && products.length > 0 ? products.map((product, index) => (
-                <div key={index} className="product">
-                    <div className="product__image">
-                        <img src={product.images[0]} alt="Product Image" />
+        <div className="LoadMoreComponent">
+            <div className="container">
+                {products && products.length > 0 ? products.map((product, index) => (
+                    <div key={product.id} className="product">
+                        <img src={product.images[0]} alt="Product Image"/>
                         <h3>{product.title}</h3>
                         <p>{product.description}</p>
                     </div>
-                </div>
-            )) : null}
-            {loading ? <div>Loading...</div> : <button onClick={loadMore}>Load More</button>}
+                )) : null}
+            </div>
+            {loading ? <div className={"loading"}>Loading...</div> : <button onClick={loadMore}>Load More</button>}
         </div>
     );
 };
