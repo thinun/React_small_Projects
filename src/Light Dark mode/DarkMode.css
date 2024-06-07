@@ -1,0 +1,19 @@
+/* src/DarkMode.css */
+.container {
+    @apply text-8xl font-bold text-amber-600;
+}
+
+.darkButton {
+    @apply absolute top-0 right-0 mr-4 mt-4 bg-black py-4 px-4 rounded text-white;
+}
+
+.lightButton {
+    @apply absolute top-0 right-0 mr-4 mt-4 bg-white py-4 px-4 rounded text-black;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.text {
+    @apply dark:text-blue-700;
+}

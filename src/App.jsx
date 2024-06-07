@@ -1,5 +1,5 @@
 
-import MyComponent from "./Light Dark mode/DarkMode.jsx";
+import DarkMode from "./Light Dark mode/DarkMode.jsx";
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-        <MyComponent></MyComponent>
+        <DarkMode></DarkMode>
 
     </>
   )
